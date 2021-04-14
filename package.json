@@ -19,7 +19,7 @@
     "typescript"
   ],
   "galleryBanner": {
-    "color": "",
+    "color": "#24282f",
     "theme": "dark"
   },
   "contributes": {
