@@ -1,0 +1,101 @@
+{
+  "name": "vscode-exalt",
+  "version": "0.1.0",
+  "publisher": "jleeson",
+  "engines": {
+    "vscode": "^1.29.0"
+  },
+  "license": "MIT",
+  "displayName": "Exalt",
+  "description": "Syntax highlighting and intellisense for exalt templates",
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "exalt",
+    "html",
+    "template",
+    "javascript",
+    "typescript"
+  ],
+  "galleryBanner": {
+    "color": "",
+    "theme": "dark"
+  },
+  "contributes": {
+    "grammars": [
+      {
+        "injectTo": [
+          "source.js",
+          "source.js.jsx",
+          "source.jsx",
+          "source.ts",
+          "source.tsx",
+          "text.html.basic"
+        ],
+        "scopeName": "inline.exalt",
+        "path": "./syntaxes/exalt.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.html": "html",
+          "meta.embedded.block.css": "css",
+          "source.css": "css"
+        }
+      },
+      {
+        "injectTo": [
+          "source.js",
+          "source.js.jsx",
+          "source.jsx",
+          "source.ts",
+          "source.tsx",
+          "text.html.basic"
+        ],
+        "scopeName": "inline.exalt.string.injection",
+        "path": "./syntaxes/exalt-string-injection.json",
+        "embeddedLanguages": {
+          "meta.template.expression.ts": "typescript"
+        }
+      },
+      {
+        "injectTo": [
+          "source.js",
+          "source.js.jsx",
+          "source.jsx",
+          "source.ts",
+          "source.tsx",
+          "text.html.basic"
+        ],
+        "scopeName": "inline.exalt.style.injection",
+        "path": "./syntaxes/exalt-style-injection.json",
+        "embeddedLanguages": {
+          "meta.template.expression.ts": "typescript"
+        }
+      }
+    ],
+    "typescriptServerPlugins": [
+      {
+        "name": "typescript-lit-html-plugin"
+      }
+    ]
+  },
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact"
+  ],
+  "scripts": {
+    "publish": "vsce publish"
+  },
+  "icon": "resources/logo.png",
+  "repository": {
+    "url": "https://github.com/exalt/vscode-exalt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/exalt/vscode-exalt/issues"
+  },
+  "homepage": "https://github.com/exalt/vscode-exalt#readme",
+  "dependencies": {
+    "typescript-lit-html-plugin": "^0.9.0"
+  }
+}
