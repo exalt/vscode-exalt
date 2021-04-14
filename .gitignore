@@ -22,6 +22,9 @@ build/Release
 # Dependency directories
 node_modules/
 
+# VSCODE BUILD
+*.vsix
+
 # TypeScript v1 declaration files
 typings/
 
