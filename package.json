@@ -78,13 +78,8 @@
       }
     ]
   },
-  "activationEvents": [
-    "onLanguage:javascript",
-    "onLanguage:javascriptreact",
-    "onLanguage:typescript",
-    "onLanguage:typescriptreact"
-  ],
   "scripts": {
+    "package": "vsce package",
     "publish": "vsce publish"
   },
   "icon": "resources/logo.png",
@@ -97,5 +92,8 @@
   "homepage": "https://github.com/exalt/vscode-exalt#readme",
   "dependencies": {
     "typescript-lit-html-plugin": "^0.9.0"
+  },
+  "devDependencies": {
+    "vsce": "^1.87.1"
   }
 }
