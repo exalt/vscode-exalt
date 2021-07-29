@@ -20,17 +20,17 @@ The exalt vscode extension adds highlighting and intellisense for exalt template
 
 ```js
 import { Component, html } from "@exalt/core";
+import { define } from "@exalt/core/decorators";
 
+@define("hello-world")
 export class HelloWorld extends Component {
 
     render() {
         return html`
-            <h1>This template should now have syntax highlighting and intellisense</h1>
+            <h1>Hello World!</h1>
         `;
     }
 }
-
-Component.create({ name: "hello-world" }, HelloWorld);
 ```
 
 ---
